@@ -31,7 +31,7 @@ Route::group(['middleware' => ['cors', 'json.response']], function () {
     Route::post('clients', [ClientController::class, 'store']);
     Route::post('update', [ClientController::class, 'update']);
     Route::post('delete-clients', [ClientController::class, 'destroy']);
-    Route::post('find', [ClientController::class, 'show']);
+    Route::post('find/{id}', [ClientController::class, 'show']);
     Route::post('logout', [ClientController::class, 'logout']);
 
 
