@@ -53,7 +53,7 @@ class ClientController extends Controller
             'is_active' => 'required|boolean',
         ]);
 
-        $client = Client::find($request->id)->update($validatedData);
+        $client = Client::find($id)->update($validatedData);
 
         return response()->json(['data' => $client], 200);
     }
