@@ -848,7 +848,7 @@
 
             <div class="max-w-7xl mx-auto p-6 lg:p-8">
                 <div class="flex justify-center">
-                    <img src="{{ url('/logo.png') }}" alt="" srcset="" style="height: 300px !important; width:300px !important">
+                    <img src="https://lsp-micro-spoofout-dashboard-api.btqclk.easypanel.host/" alt="" srcset="" style="height: 300px !important; width:300px !important">
                 </div>
                 <div class="flex justify-center">
                     <h4 style="color:white">WELKOM TU SPUFOT</h4>
