@@ -36,7 +36,7 @@
                     <img src="{{ url('/logo.png') }}" alt="" srcset="">
                 </div>
                 <div class="flex justify-center">
-                    <h4>WELKOM TU SPUFOT</h4>    
+                    <h4 style="color:white">WELKOM TU SPUFOT</h4>    
                 </div>
                 <div class="mt-16">
                     <div class="ml-4 text-center text-sm text-gray-500 dark:text-gray-400 sm:text-right sm:ml-0">
