@@ -34,7 +34,7 @@ class ClientController extends Controller
     }
 
     // Get details of a specific client
-    public function show( $client)
+    public function show($client)
     {
         $data = Client::find($client);
         return response()->json(['data' => $data]);
@@ -59,10 +59,13 @@ class ClientController extends Controller
     }
 
     // Delete a specific client
-    public function destroy(Client $client)
+    public function destroy($id)
     {
-        $client->delete();
-
-        return response()->json(['message' => 'Client deleted successfully'], 204);
+        $client = Client::find($id);
+        if ($client) {
+            $client->delete();
+            return response()->json(['message' => 'Client deleted successfully'], 204);
+        }
+        return response()->json(['message' => 'Client deleted failed'], 400);
     }
 }
