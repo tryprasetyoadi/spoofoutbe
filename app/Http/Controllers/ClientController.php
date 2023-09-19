@@ -41,7 +41,7 @@ class ClientController extends Controller
     }
 
     // Update a specific client
-    public function update(Request $request, Client $client)
+    public function update(Request $request, $id)
     {
         $validatedData = $request->validate([
             'name' => 'required|string',
@@ -53,7 +53,7 @@ class ClientController extends Controller
             'is_active' => 'required|boolean',
         ]);
 
-        $client->update($validatedData);
+        $client = Client::find($request->id)->update($validatedData);
 
         return response()->json(['data' => $client], 200);
     }
@@ -62,10 +62,11 @@ class ClientController extends Controller
     public function destroy($id)
     {
         $client = Client::find($id);
-        if ($client) {
-            $client->delete();
-            return response()->json(['message' => 'Client deleted successfully'], 204);
+
+        if (!$client) {
+            return response()->json(['message' => 'Client deleted failed'], 400);
         }
-        return response()->json(['message' => 'Client deleted failed'], 400);
+        $client->delete();
+        return response()->json(['data' => $client, 'message' => 'Client deleted successfully'], 200);
     }
 }
