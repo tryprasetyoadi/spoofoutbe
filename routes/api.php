@@ -30,8 +30,8 @@ Route::group(['middleware' => ['cors', 'json.response']], function () {
     Route::get('clients', [ClientController::class, 'index']);
     Route::post('clients', [ClientController::class, 'store']);
     Route::post('register', [AuthController::class, 'register']);
-    Route::post('update?id={id}', [ClientController::class, 'update']);
-    Route::delete('delete-clients/{id}', [ClientController::class, 'destroy']);
+    Route::post('update/id', [ClientController::class, 'update']);
+    Route::post('delete-clients/{id}', [ClientController::class, 'destroy']);
     Route::post('find/{id}', [ClientController::class, 'show']);
     Route::post('logout', [ClientController::class, 'logout']);
 
