@@ -33,7 +33,7 @@
 
             <div class="max-w-7xl mx-auto p-6 lg:p-8">
                 <div class="flex justify-center">
-                    <img src="{{ url('/logo.png') }}" alt="" srcset="">
+                    <img src="{{ url('/logo.png') }}" alt="" srcset="" style="height: 100px !important; width:auto !important">
                 </div>
                 <div class="flex justify-center">
                     <h4 style="color:white">WELKOM TU SPUFOT</h4>    
