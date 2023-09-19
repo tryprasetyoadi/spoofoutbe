@@ -29,6 +29,7 @@ Route::group(['middleware' => ['cors', 'json.response']], function () {
     Route::post('login', [AuthController::class, 'login']);
     Route::get('clients', [ClientController::class, 'index']);
     Route::post('clients', [ClientController::class, 'store']);
+    Route::post('register', [AuthController::class, 'register']);
     Route::post('update', [ClientController::class, 'update']);
     Route::post('delete-clients', [ClientController::class, 'destroy']);
     Route::post('find/{id}', [ClientController::class, 'show']);
